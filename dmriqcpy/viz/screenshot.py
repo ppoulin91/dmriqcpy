@@ -513,7 +513,7 @@ def screenshot_tracking(tracking, t1, directory="."):
 
     imgs_comb = Image.fromarray(image)
     imgs_comb = imgs_comb.resize((3 * 1920, 1920 + 1080))
-    image_name = os.path.basename(str(tracking)).split(".")[0]
+    image_name = os.path.splitext(os.path.basename(str(tracking)))[0]
     name = os.path.join(directory, image_name + '.png')
     imgs_comb.save(name)
 
